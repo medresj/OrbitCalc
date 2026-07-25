@@ -1,0 +1,18 @@
+
+======================================================
+this is just for my self to figure out how to do this.
+======================================================
+
+what to do in orbit:
+    deploy a payload
+
+payload has weight, so you need fuel.
+fuel has weight, so theres that.
+
+the falcon 9 rocket needs 549.054 kg fuel to get to low earth orbit.
+the payload it can carry is 22.800 kg
+
+payload is 3,99%, which is pretty high (the space shuttle only has 1,35%)
+
+src: https://en.wikipedia.org/wiki/Payload_fraction
+
