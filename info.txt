@@ -17,3 +17,10 @@ payload is 3,99%, which is pretty high (space shuttle only has 1,35%)
 src: https://en.wikipedia.org/wiki/Payload_fraction
 
 the formula for the mpayload capacity is from claude
+
+exhaust velocity v_e is 3410 m/s and is constant
+Body	Orbital velocity (v_orbit)	Total Δv, surface → low orbit 
+Moon	~1.68 km/s	                ~1.7–1.9 km/s -> 1800 m/s
+Mars	~3.55 km/s	                ~4.1–4.3 km/s -> 4200 m/s
+Pluto	~0.86 km/s	                ~0.9–1.0 km/s -> 1000 m/s
+Sun	    ~437 km/s	                ~450–500+ km/s -> 500000 m/s

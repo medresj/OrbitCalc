@@ -1,6 +1,5 @@
 
-const const1 = 1.167 * 10 ** -8;
-const const2 = 1.408 * 10 ** -7;
+const ve = 3410
 
 function energyfunc() {
   const value = document.getElementById('energy').value;
@@ -20,13 +19,31 @@ function handleToggle() {
     output.textContent = `Energy: ${textBox.value}`;
   });
 
-function calculate() {
-    if (document.getElementById('toggle').checked) {
-        const payload = const2 * energyinput.value;
-        document.getElementById('result').textContent = `Result: ${payload} kg`;
-    
-    } else {
-        const payload = const1 * energyinput.value;
-        document.getElementById('result').textContent = `Result: ${payload} kg`;
+function getdeltaVtoLO() {
+    switch (document.getElementById("optionSelect").value) {
+        case "Earth":
+            return 9400;
+        case "Moon":
+            return 1800;
+        case "Mars":
+            return 4200;
+        case "Pluto":
+            return 1000;
+        case "Sun":
+            return 500000;
+        default:
+            return 0;
     }
+}
+
+function calculateConst() {
+    let power = getdeltaVtoLO() / ve;
+    let result1 = Math.E ** power;
+    let result2 = result1 - 1;
+    return result2;
+}
+
+function calculateWeight() {
+    let finalResult = 2 * document.getElementById("energyinput").value / (ve ** 2 * calculateConst());
+    result.textContent = `Result: ${finalResult} kg`;
 }

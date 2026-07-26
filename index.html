@@ -22,23 +22,47 @@
 
 <div class="row">
     <div class="col">
-      <h2></h2>
+      <h3></h3>
       <p>This calculator calculates the theoretical mass of a payload based on the efficiency of the SpaceX Falcon 9 rocket.</p>
-      <p>As os now it is just a purely theoretical model, which 1) assumes 100% energy efficiency, which is pysically impossible, and 2)  should not be used for anything serious.</p>
+      <p>As of now it is just a purely theoretical model, which 1) assumes 100% energy efficiency, which is pysically impossible, 2) assumes that the rocket doesn't have any mass, and 3) should (of course) not be used for anything serious.</p>
     </div>
     <div class="col">
-      <h2>the calculator</h2>
+      <h3>the calculator</h3>
       <input type="text" id="energyinput" placeholder="Energy in Joules" oninput="updateOutput()">
       <p3 id="output"></p3>
       <script src="script.js"></script>
       <p3 id="demo"></p3>
+
+      <br>
+
+  <select id="optionSelect">
+    <option value="Earth">Earth</option>
+    <option value="Moon">Moon</option>
+    <option value="Mars">Mars</option>
+    <option value="Pluto">Pluto</option>
+    <option value="Sun">Sun</option>
+  </select>
+ 
+  <div id="customFieldWrapper">
+    <input type="number" id="customNumber" placeholder="gravity in m/s²" oninput="updateOutput()">
+  </div>
+
+  <script src="dropdown.js"></script>
+
+      <br>
+
       <label class="switch">
         <input type="checkbox" id="toggle" onchange="handleToggle()">
         <span class="slider"></span>
       </label>
       <p3 id="status">straight up?: false</p3>
-      <button id="button" type="button" onclick="calculate()" >calculate</button>
+      <p4>note: straight up won't end in orbit</p4>
+
+      <br>
+
+      <button id="button" type="button" onclick="calculateWeight()" >calculate</button>
       <p3 id="result">Result: </p3>
+
     </div>
   </div>
 

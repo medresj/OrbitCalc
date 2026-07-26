@@ -13,6 +13,11 @@ h2 {
   text-align: center;
   color: #9090bb;
 }
+h3 {
+  font-size: 25px;
+  text-align: left;
+  color: #9090bb;
+}
 p {
   color: #afafd1;
 }
@@ -23,7 +28,8 @@ p3 {
   color: #afafd1;
 }
 p4 {
-  color: #afafd1;
+  font-size: 12px;
+  color: #76768d;
 }
 p5 {
   color: #afafd1;
@@ -32,5 +38,14 @@ p6 {
   color: #afafd1;
 }
 button {
-    color: #181541;
+  color: #181541;
+}
+
+#customFieldWrapper {
+  margin-top: 14px;
+  /* hidden by default */
+  display: none;
+  }
+#customFieldWrapper.visible {
+  display: block;
 }
