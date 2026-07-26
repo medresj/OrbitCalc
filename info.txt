@@ -12,7 +12,8 @@ fuel has weight, so theres that.
 the falcon 9 rocket needs 549.054 kg fuel to get to low earth orbit.
 the payload it can carry is 22.800 kg
 
-payload is 3,99%, which is pretty high (the space shuttle only has 1,35%)
+payload is 3,99%, which is pretty high (space shuttle only has 1,35%)
 
 src: https://en.wikipedia.org/wiki/Payload_fraction
 
+the formula for the mpayload capacity is from claude

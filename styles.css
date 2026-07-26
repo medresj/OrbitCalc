@@ -3,10 +3,33 @@ body {
   background-color: #202020;
 }
 h1 {
+  font-size: 35px;
+  border: 1px double #ffffff;
+  text-align: center;
   color: #6666aa;
 }
+h2 {
+  font-size: 25px;
+  text-align: center;
+  color: #9090bb;
+}
 p {
-  color: #a0a0cf;
+  color: #afafd1;
+}
+p2 {
+  color: #afafd1;
+}
+p3 {
+  color: #afafd1;
+}
+p4 {
+  color: #afafd1;
+}
+p5 {
+  color: #afafd1;
+}
+p6 {
+  color: #afafd1;
 }
 button {
     color: #181541;
