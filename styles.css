@@ -41,11 +41,19 @@ button {
   color: #181541;
 }
 
-#customFieldWrapper {
+#customFieldWrapper1, #customFieldWrapper2 {
   margin-top: 14px;
   /* hidden by default */
   display: none;
   }
-#customFieldWrapper.visible {
+#customFieldWrapper1.visible {
   display: block;
+}
+#customFieldWrapper2.visible {
+  display: block;
+}
+
+#energyinput {
+  margin-top: 7px;
+  margin-bottom: 7px;
 }

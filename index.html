@@ -25,10 +25,11 @@
       <h3></h3>
       <p>This calculator calculates the theoretical mass of a payload based on the efficiency of the SpaceX Falcon 9 rocket.</p>
       <p>As of now it is just a purely theoretical model, which 1) assumes 100% energy efficiency, which is pysically impossible, 2) assumes that the rocket doesn't have any mass, and 3) should (of course) not be used for anything serious.</p>
+      <p>If you plan on using the "custom" option, please know that it is even more inaccurate.</p>
     </div>
     <div class="col">
       <h3>the calculator</h3>
-      <input type="text" id="energyinput" placeholder="Energy in Joules" oninput="updateOutput()">
+      <input type="number" id="energyinput" placeholder="Energy in Joules" oninput="updateOutput()">
       <p3 id="output"></p3>
       <script src="script.js"></script>
       <p3 id="demo"></p3>
@@ -41,10 +42,15 @@
     <option value="Mars">Mars</option>
     <option value="Pluto">Pluto</option>
     <option value="Sun">Sun</option>
+    <option value="custom">Custom</option>
   </select>
  
-  <div id="customFieldWrapper">
-    <input type="number" id="customNumber" placeholder="gravity in m/s²" oninput="updateOutput()">
+  <div id="customFieldWrapper1">
+    <input type="number" id="customNumber1" placeholder="gravity in m/s²" oninput="updateOutput()">
+  </div>
+
+  <div id="customFieldWrapper2">
+    <input type="number" id="customNumber2" placeholder="radius in meters" oninput="updateOutput()">
   </div>
 
   <script src="dropdown.js"></script>

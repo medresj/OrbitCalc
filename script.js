@@ -20,19 +20,31 @@ function handleToggle() {
   });
 
 function getdeltaVtoLO() {
-    switch (document.getElementById("optionSelect").value) {
-        case "Earth":
-            return 9400;
-        case "Moon":
-            return 1800;
-        case "Mars":
+    if (document.getElementById("optionSelect").value === "custom") {
+        const g = parseFloat(document.getElementById("customNumber1").value);
+        const r = parseFloat(document.getElementById("customNumber2").value);
+        v_o = Math.sqrt(g * r);
+        g_loss= g * 140 // 140 seconds until orbit
+        let g_steer_drag= 500;
+        return v_o + g_loss + g_steer_drag;
+
+    } else {
+        switch (document.getElementById("optionSelect").value) {
+            case "Earth":
+                return 9400;
+            case "Moon":
+                return 1800;
+            case "Mars":
             return 4200;
         case "Pluto":
             return 1000;
         case "Sun":
             return 500000;
+        case "custom":
+            return parseFloat(document.getElementById("customNumber1").value);
         default:
             return 0;
+        }
     }
 }
 
