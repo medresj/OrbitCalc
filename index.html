@@ -13,6 +13,16 @@
     border: 1px solid #ccc;
     padding: 15px;
   }
+  .col-left {
+    flex: 2;
+    border: 1px solid #ccc;
+    padding: 15px;
+  }
+  .col-right {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+  }
 </style>
 </head>
 <body>
@@ -21,13 +31,120 @@
 <h2>Welcome to the Orbit Calculator</h2>
 
 <div class="row">
-    <div class="col">
-      <h3></h3>
+    <div class="col-left">
+      <h3>Information</h3>
       <p>This calculator calculates the theoretical mass of a payload based on the efficiency of the SpaceX Falcon 9 rocket.</p>
       <p>As of now it is just a purely theoretical model, which 1) assumes 100% energy efficiency, which is pysically impossible, 2) assumes that the rocket doesn't have any mass, and 3) should (of course) not be used for anything serious.</p>
       <p>If you plan on using the "custom" option, please know that it is even more inaccurate.</p>
+      <div class="row">
+        <div class="col">
+          <h4></h4>
+            <p>
+              <table id="table">
+                <tr>
+                  <th>Joules</th>
+                  <th>multiplier</th>
+                  <th>prefix</th>
+                </tr>
+                <tr>
+                  <td>1000</td>
+                  <td>10³</td>
+                  <td>kilo, kj</td>
+                </tr>
+                <tr>
+                  <td>1000000</td>
+                  <td>10⁶</td>
+                  <td>mega, Mj</td>
+                </tr>
+                <tr>
+                  <td>1000000000</td>
+                  <td>10⁹</td>
+                  <td>giga, Gj</td>
+                </tr>
+                <tr>
+                  <td>1000000000000</td>
+                  <td>10¹²</td>
+                  <td>tera, Tj</td>
+                </tr>
+                <tr>
+                  <td>1000000000000000</td>
+                  <td>10¹⁵</td>
+                  <td>peta, Pj</td>
+                </tr>
+                <tr>
+                  <td>1000000000000000000</td>
+                  <td>10¹⁸</td>
+                  <td>exa, Ej</td>
+                </tr>
+                <tr>
+                  <td>1000000000000000000000</td>
+                  <td>10²¹</td>
+                  <td>zetta, Zj</td>
+                </tr>
+                <tr>
+                  <td>1000000000000000000000000</td>
+                  <td>10²⁴</td>
+                  <td>yotta, Yj</td>
+                </tr>
+              </table>
+            </p>
+        </div>
+        <div class="col">
+          <h4></h4>
+          <p>
+            <table id="table">
+              <tr>
+                <th>Joules</th>
+                <th>multiplier</th>
+                <th>prefix</th>
+              </tr>
+              <tr>
+                <td>0.001</td>
+                <td>10⁻³</td>
+                <td>milli, mj</td>
+              </tr>
+              <tr>
+                <td>0.000001</td>
+                <td>10⁻⁶</td>
+                <td>micro, μj</td>
+              </tr>
+              <tr>
+                <td>0.000000001</td>
+                <td>10⁻⁹</td>
+                <td>nano, nj</td>
+              </tr>
+              <tr>
+                <td>0.000000000001</td>
+                <td>10⁻¹²</td>
+                <td>pico, pj</td>
+              </tr>
+              <tr>
+                <td>0.000000000000001</td>
+                <td>10⁻¹⁵</td>
+                <td>femto, fj</td>
+              </tr>
+              <tr>
+                <td>0.000000000000000001</td>
+                <td>10⁻¹⁸</td>
+                <td>atto, aj</td>
+              </tr>
+              <tr>
+                <td>0.000000000000000000001</td>
+                <td>10⁻²¹</td>
+                <td>zepto, zj</td>
+              </tr>
+              <tr>
+                <td>0.000000000000000000000001</td>
+                <td>10⁻²⁴</td>
+                <td>yocto, yj</td>
+              </tr>
+            </table>
+          </p>
+        </div>
+      </div>
+      
     </div>
-    <div class="col">
+    <div class="col-right">
       <h3>the calculator</h3>
       <input type="number" id="energyinput" placeholder="Energy in Joules" oninput="updateOutput()">
       <p3 id="output"></p3>
